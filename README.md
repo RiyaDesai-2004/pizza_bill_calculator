@@ -6,8 +6,12 @@ This is a command-line based Java project for a Pizza Bill Calculator developed 
 Key Features:
 
 •	Choose between Veg and Non-Veg pizzas
+
 •	Select different pizza types and quantities
+
 •	Automatically calculate the bill (based on type and quantity)
+
 •	Save the bill details in a text file (customers.txt)
+
 •	Structured using Object-Oriented Programming principles
 
