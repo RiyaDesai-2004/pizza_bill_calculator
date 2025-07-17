@@ -1,18 +1,46 @@
-Project Overview – Pizza Bill Calculator
 
-This is a command-line based Java project for a Pizza Bill Calculator developed using Java. The application allows users to order pizzas (veg or non-veg), select type and quantity, calculate the total bill, and generate a final bill that is saved in a file. It simulates a basic pizza ordering system suitable for small shops or academic practice.
+# 📦 Pizza Bill Calculator
+
+A simple command-line Java application that helps manage pizza orders and calculate the total bill for customers. Designed for practice and learning, this tool reads customer data, allows bill generation, and demonstrates file handling and basic object-oriented programming in Java.
 
 
+## 🚀 Features
+🍕 Add new pizza orders
 
-Key Features:
+💸 Calculate individual bills
 
-•	Choose between Veg and Non-Veg pizzas
+🧾 Display customer details
 
-•	Select different pizza types and quantities
+📁 Read/write customer data from/to a .txt file
 
-•	Automatically calculate the bill (based on type and quantity)
 
-•	Save the bill details in a text file (customers.txt)
+## 🛠️ Tech Stack
+Language: Java
 
-•	Structured using Object-Oriented Programming principles
+Platform: Console-based
 
+File I/O: Reads from customers.txt
+
+
+## Project Structure
+
+```bash
+pizza_bill_calculator-main/
+├── Driver.java         # Main class to run the pizza billing system
+├── customers.txt       # Stores customer names and orders
+└── README.md           # Project documentation
+```
+
+## ▶️ How to Run
+Clone the repo
+
+```bash
+git clone https://github.com/RiyaDesai-2004/pizza_bill_calculator.git
+cd pizza_bill_calculator-main
+
+```
+Compile and Run
+```bash
+javac Driver.java
+java Driver
+```
