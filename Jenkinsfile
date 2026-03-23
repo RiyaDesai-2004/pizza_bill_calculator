@@ -2,19 +2,11 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK17'       // Jenkins me jo naam diya tha
-        maven 'Maven3'    // Jenkins me jo naam diya tha
+        jdk 'JDK17'
+        maven 'Maven3'
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                // GitHub se code pull karega
-                git branch: 'main',
-                    url: 'https://github.com/tera-username/tera-repo.git'
-            }
-        }
 
         stage('Build') {
             steps {
@@ -30,7 +22,6 @@ pipeline {
             }
             post {
                 always {
-                    // Test results publish karega
                     junit '**/target/surefire-reports/*.xml'
                 }
             }
@@ -42,14 +33,15 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
+
     }
 
     post {
         success {
-            echo 'Pipeline SUCCESS!'
+            echo 'Pipeline SUCCESS! ✅'
         }
         failure {
-            echo 'Pipeline FAILED!'
+            echo 'Pipeline FAILED! ❌'
         }
     }
 }
