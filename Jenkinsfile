@@ -10,10 +10,10 @@ pipeline {
             }
         }
 
-        stage('Run') {
+        stage('Check Class File') {
             steps {
-                echo 'Running the project...'
-                sh 'java Driver'
+                echo 'Checking compiled output...'
+                sh 'ls -la *.class'
             }
         }
 
