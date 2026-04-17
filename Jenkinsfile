@@ -13,14 +13,13 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    // Tool name jo aapne Jenkins Global Tool Configuration mein rakha tha
-                    def scannerHome = tool 'sonarqube' 
+                    // Yahan 'sonar-scanner' likhna hai kyunki aapne ye naam rakha hai
+                    def scannerHome = tool 'sonar-scanner' 
                     
-                    // Server name jo aapne System Configuration mein rakha tha
+                    // Server ka naam (jo Manage Jenkins > System mein rakha tha)
                     withSonarQubeEnv('sonarqube-server') {
                         sh "${scannerHome}/bin/sonar-scanner \
                         -Dsonar.projectKey=pizza-bill-calculator \
-                        -Dsonar.projectName='Pizza Bill Calculator' \
                         -Dsonar.sources=. \
                         -Dsonar.java.binaries=."
                     }
